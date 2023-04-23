@@ -1,0 +1,42 @@
+{
+  "name": "sns",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "db:init": "ts-node db/create_db.ts && ts-node db/insert_records.ts",
+    "db:drop": "ts-node db/drop_db.ts",
+    "db:reset": "npm run db:drop && npm run db:init",
+    "test:db_connection": "ts-node db/connection_test.ts",
+    "test:setup_db": "jest __tests__/setup_db.ts",
+    "test:write_query:question1": "jest __tests__/write_query.ts --t question1",
+    "test:write_query:question2": "jest __tests__/write_query.ts --t question2",
+    "test:write_query:question3": "jest __tests__/write_query.ts --t question3",
+    "test:write_query:question4": "jest __tests__/write_query.ts --t question4",
+    "test:write_query:question5": "jest __tests__/write_query.ts --t question5",
+    "test:write_query:question6": "jest __tests__/write_query.ts --t question6",
+    "test:write_query:question7": "jest __tests__/write_query.ts --t question7",
+    "lint:check": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint --ext .js,.ts . --fix",
+    "format:check": "prettier --check '**/*.{js,ts}'",
+    "format:fix": "prettier --write '**/*.{js,ts}'"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mysql2": "^3.2.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7",
+    "ts-jest": "^29.1.0"
+  }
+}
